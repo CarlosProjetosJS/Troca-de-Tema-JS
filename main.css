@@ -1,0 +1,77 @@
+/* Fonte padrão do documento */
+body {
+    font-family: monospace;
+}
+
+/* Fonte aplicada apenas para itens da lista */
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo padrão dos <li> */
+li {
+    list-style: circle;
+}
+
+/* Itens da lista com a classe "list" recebem outro marcador */
+.list {
+    list-style: square;
+}
+
+/* Tema claro: define variáveis de cores */
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/* Variáveis globais */
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Tema escuro: define outras cores */
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* Todas as tags herdam as cores e fontes padrão */
+* {
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cor de fundo depende da variável do tema */
+body {
+    background: var(--bg);
+}
+
+/* Botão circular de alternância de tema */
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+
+    /* Centraliza o texto dentro do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Remove o contorno ao focar o botão */
+.btn:focus {
+    outline-style: none;
+}
